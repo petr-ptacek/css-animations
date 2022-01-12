@@ -1,0 +1,9 @@
+.card {
+  padding: 2rem;
+  background-color: $color--black-2;
+  border-radius: 6px;
+
+  &__heading {
+    font-size: 2rem;
+  }
+}
