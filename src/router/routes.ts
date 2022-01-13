@@ -1,17 +1,23 @@
 import type { RouteRecordRaw } from 'vue-router';
 import HomeView                from '@/views/Home.vue';
-import { RouterNames }         from './routerNames';
+import { RoutesNames }         from './routesNames';
 
 const routes: RouteRecordRaw[] = [
   {
-    name: RouterNames.Home,
+    name: RoutesNames.Home,
     path: '/',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: 'CSS Animations'
+    }
   },
   {
-    name: RouterNames.CSSTransitionsBasics,
+    name: RoutesNames.CSSTransitionsBasics,
     path: '/css-transitions-basics',
-    component: () => import('@/views/CSSTransitionsBasics.vue')
+    component: () => import('@/views/CSSTransitionsBasics.vue'),
+    meta: {
+      title: 'CSS Transitions Basics'
+    }
   }
 ];
 

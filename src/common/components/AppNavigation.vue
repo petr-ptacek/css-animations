@@ -1,19 +1,64 @@
 <template>
   <nav class="navigation">
-    <ul class="navigation__items">
-      <li class="navigation__item">
-        <router-link class="navigation__link" to="/">
-          <span class="navigation__link__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-          </span>
-          <span class="navigation__link__title">
-            Home
-          </span>
-        </router-link>
-      </li>
-    </ul>
+    <router-link v-show="isVisibleLinkBack" class="navigation__link navigation__link--back link" to="/">
+      <span class="navigation__link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 19-7-7m0 0 7-7m-7 7h18" />
+        </svg>
+      </span>
+      <span class="navigation__link-title">
+        BACK
+      </span>
+    </router-link>
+
+    <div class="navigation__route-title">
+      {{ routeTitle }}
+    </div>
   </nav>
 </template>
+
+<script lang="ts" setup>
+import { computed }            from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import { RoutesNames }         from '@/router';
+
+const route = useRoute();
+const router = useRouter();
+
+const routeTitle = computed(() => route.meta.title);
+const isVisibleLinkBack = computed(() => route.name !== RoutesNames.Home);
+</script>
+
+<style scoped lang="scss">
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__route-title {
+  font-size: 3.5rem;
+}
+
+.navigation__link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+}
+
+.navigation__link-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.navigation__link--back {
+  font-size: 1.2rem;
+}
+</style>

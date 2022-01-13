@@ -9,5 +9,13 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+  css: {
+    preprocessorOptions: {
+      additionalData:
+          `
+            @import "src/assets/styles/abstract/index";
+          `
+    }
   }
 });

@@ -24,17 +24,3 @@ body {
   margin: 0 auto;
   width: 90%;
 }
-
-.app-header {
-  padding: 1rem 2rem;
-  background-color: $color--black-2;
-
-  &__title {
-    margin: 0;
-    text-align: center;
-  }
-}
-
-.app-content {
-  padding: 2.5rem 0;
-}
