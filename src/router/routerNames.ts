@@ -1,3 +1,4 @@
 export enum RouterNames {
-  Home = 'Home'
+  Home = 'Home',
+  CSSTransitionsBasics = 'CSSTransitionsBasics'
 }

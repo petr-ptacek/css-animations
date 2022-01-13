@@ -1,0 +1,12 @@
+.topics-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+  gap: 1rem;
+}
+
+.topics-list__item {
+  font-size: 2rem;
+  padding: 2rem;
+  display: inline-block;
+  background-color: $color--black-2;
+}

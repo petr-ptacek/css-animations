@@ -7,6 +7,11 @@ const routes: RouteRecordRaw[] = [
     name: RouterNames.Home,
     path: '/',
     component: HomeView
+  },
+  {
+    name: RouterNames.CSSTransitionsBasics,
+    path: '/css-transitions-basics',
+    component: () => import('@/views/CSSTransitionsBasics.vue')
   }
 ];
 

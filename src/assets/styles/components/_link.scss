@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    color: $color--yellow;
+  }
+}

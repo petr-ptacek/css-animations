@@ -1,11 +1,11 @@
 <template>
   <article class="view-home">
     <div class="container">
-      <Topics />
+      <TopicsList />
     </div>
   </article>
 </template>
 
 <script lang="ts" setup>
-import { Topics } from '@/layouts';
+import TopicsList from '@/common/components/TopicsList.vue';
 </script>
