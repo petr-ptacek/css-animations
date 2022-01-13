@@ -5,6 +5,6 @@
   cursor: pointer;
 
   &:hover {
-    color: $color--yellow;
+    color: var(--color-yellow);
   }
 }

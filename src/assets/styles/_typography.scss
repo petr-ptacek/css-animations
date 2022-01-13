@@ -5,8 +5,18 @@ html {
   font-family: "Nunito Sans", sans-serif;
 }
 
+.heading-secondary,
 .heading-primary {
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
 }
+
+.heading-secondary {
+  font-size: 3rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+

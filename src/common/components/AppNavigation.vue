@@ -18,12 +18,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed }            from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import { RoutesNames }         from '@/router';
+import { computed }    from 'vue';
+import { useRoute }    from 'vue-router';
+import { RoutesNames } from '@/router';
 
 const route = useRoute();
-const router = useRouter();
 
 const routeTitle = computed(() => route.meta.title);
 const isVisibleLinkBack = computed(() => route.name !== RoutesNames.Home);

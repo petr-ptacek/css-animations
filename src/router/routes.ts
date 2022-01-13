@@ -14,9 +14,9 @@ const routes: RouteRecordRaw[] = [
   {
     name: RoutesNames.CSSTransitionsBasics,
     path: '/css-transitions-basics',
-    component: () => import('@/views/CSSTransitionsBasics.vue'),
+    component: () => import('@/views/topics/TransitionsBasics.vue'),
     meta: {
-      title: 'CSS Transitions Basics'
+      title: 'Transitions Basics'
     }
   }
 ];
